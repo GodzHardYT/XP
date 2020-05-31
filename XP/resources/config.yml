@@ -1,0 +1,24 @@
+#                                           |------------------------------------------------------------|
+#                                           |        Plugin created by WHiTeG0Dz_ and for support        |
+#                                           | Contact me on telegram @GodzHard or Discord WHiTeG0Dz_#2791|
+#                                           |         Thanks @Krammeth for config translation!           |
+#                                           |------------------------------------------------------------|
+
+#Choose the permission to use /xp command
+permission-command: "xp.command.use"
+#Choose the message the players will receive if they fail the correct syntax
+usage-command: "§cUsage: /xp <add:remove> <player> <amount>"
+#Choose the message the players will receive when they add xp to a player
+sender-addxp: "You have added %amount% xp to %target%"
+#Choose the message the players will receive when they get xp
+target-receivexp: "You have received %amount% xp from %sender%"
+#Choose the message the players will receive when they remove xp from a player
+sender-removexp: "You have removed %amount% xp from %target%"
+#Choose the message the players will receive when they get their xp removed
+target-removedxp: "%amount% xp have been removed by %sender%"
+#Choose the message the players will receive if they don't have permissions to use the /xp command
+no-permission: "§cYou don't have enough permissions!"
+#Choose the message the target is offline
+player-not-online: "§cThe player is not online!"
+
+#If you want to check my other plugins, visit https://github.com/GodzHardYT/
