@@ -1,0 +1,8 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/GodzHardYT/XP
+build-by-default: true
+branches:
+- master
+projects:
+  XP:
+    path: XP/
+...
