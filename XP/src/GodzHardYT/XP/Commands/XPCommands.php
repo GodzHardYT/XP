@@ -18,7 +18,6 @@ class XPCommands extends Command implements PluginIdentifiableCommand {
     }
 
     public function execute(CommandSender $sender, string $commandLabel, array $args) {
-        $target =  $this->plugin->getServer()->getPlayer($args[1]);
         if ($sender->hasPermission($this->plugin->getConfig()->get("permission-command"))) {
             if (!isset($args[0])) {
                 $sender->sendMessage($this->plugin->getConfig()->get("usage-command"));
@@ -32,6 +31,7 @@ class XPCommands extends Command implements PluginIdentifiableCommand {
                 $sender->sendMessage($this->plugin->getConfig()->get("usage-command"));
                 return false;
             }
+            $target =  $this->plugin->getServer()->getPlayer($args[1]);
             if ($target === null || !$target->isOnline()) {
                 $sender->sendMessage($this->plugin->getConfig()->get("player-not-online"));
                 return false;
