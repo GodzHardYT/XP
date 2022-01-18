@@ -57,9 +57,4 @@ class XPCommands extends Command {
         }
         return false;
     }
-
-    public function getPlugin(): Plugin {
-        return $this->plugin;
-    }
-
 }
