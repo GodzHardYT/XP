@@ -7,7 +7,7 @@ use pocketmine\plugin\PluginBase;
 
 class Main extends PluginBase {
 
-    public function onEnable() {
+    public function onEnable() : void {
         $this->saveDefaultConfig();
         $this->getServer()->getCommandMap()->register("XPCommands", new XPCommands($this));
     }
