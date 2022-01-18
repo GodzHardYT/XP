@@ -5,19 +5,18 @@ namespace GodzHardYT\XP\Commands;
 use GodzHardYT\XP\Main;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
-use pocketmine\command\PluginIdentifiableCommand;
 use pocketmine\plugin\Plugin;
 
-class XPCommands extends Command implements PluginIdentifiableCommand {
+class XPCommands extends Command {
 
-    private $plugin;
+    private Main $plugin;
 
     public function __construct(Main $main) {
         parent::__construct("xp", "Edit xp player", "§cUsage: /xp");
         $this->plugin = $main;
     }
 
-    public function execute(CommandSender $sender, string $commandLabel, array $args) {
+    public function execute(CommandSender $sender, string $commandLabel, array $args) : bool {
         if ($sender->hasPermission($this->plugin->getConfig()->get("permission-command"))) {
             if (!isset($args[0])) {
                 $sender->sendMessage($this->plugin->getConfig()->get("usage-command"));
